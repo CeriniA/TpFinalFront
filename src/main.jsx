@@ -22,9 +22,7 @@ const router = createBrowserRouter([
       { path: 'contact', element: <Contact /> },
     ],
   },
-], {
-  basename: './git' // Asegúrate de que esto coincida con el nombre de tu repositorio
-})
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
