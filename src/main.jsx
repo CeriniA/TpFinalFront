@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       { path: 'products/:id', element: <ProductDetail /> },
       { path: 'about', element: <About /> },
       { path: 'contact', element: <Contact /> },
-    ],
+    ], basename: '/TpFinalFront'
   },
 ])
 
