@@ -2,7 +2,7 @@
   "name": "tp-final",
   "private": true,
   "version": "0.0.0",
-  "homepage": ".",
+  "homepage": "https://cerinia.github.io/TpFinalFront/",
   "type": "module",
   "scripts": {
     "dev": "vite",
