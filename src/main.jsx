@@ -10,20 +10,24 @@ import Contact from './pages/Contact.jsx'
 import ProductDetail from './pages/ProductDetail.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <App />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: 'products', element: <Products /> },
+        { path: 'products/:id', element: <ProductDetail /> },
+        { path: 'about', element: <About /> },
+        { path: 'contact', element: <Contact /> },
+      ]
+    }
+  ],
   {
-    path: '/',
-    element: <App />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: 'products', element: <Products /> },
-      { path: 'products/:id', element: <ProductDetail /> },
-      { path: 'about', element: <About /> },
-      { path: 'contact', element: <Contact /> },
-    ], basename: '/TpFinalFront'
-  },
-])
-
+    basename: '/TpFinalFront/'
+  }
+)
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
