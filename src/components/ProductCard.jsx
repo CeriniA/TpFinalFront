@@ -58,7 +58,7 @@ function ProductCard({ product }) {
                         ${price?.toFixed(2)}
                     </h5>
                     <Link 
-                        to={`/product/${id}`}
+                        to={`/products/${id}`}
                         className="btn btn-primary btn-sm"
                     >
                         Ver más

@@ -4,7 +4,7 @@ import ProductCard from "../components/ProductCard";
 import { Container, Row, Col } from "react-bootstrap";
 
 function Products() {
-    const { data, loading, error } = useApi("https://fakestoreapi.com/products");
+    const { data, loading, error } = useApi();
 
     if (loading) return <div className="text-center py-5"><div className="spinner-border" role="status"></div></div>;
     if (error) return <div className="alert alert-danger">Error: {error.message}</div>;

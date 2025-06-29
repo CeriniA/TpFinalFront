@@ -41,7 +41,7 @@ const useProductDetail = (productId) => {
                 }
             }
     
-              fetchProduct()
+            fetchProduct()
         }, [productId, productUrl])
         return { product, loading, error }
 }
