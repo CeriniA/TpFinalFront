@@ -1,0 +1,65 @@
+/* Estilos para la sección de bienvenida */
+.welcome-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.welcome-title {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Estilos para los botones */
+.btn-primary-gradient {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  border: none;
+  color: white;
+  box-shadow: 0 4px 15px rgba(37, 117, 252, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary-gradient:hover {
+  opacity: 0.9;
+  color: white;
+}
+
+.btn-outline-gradient {
+  border: 2px solid #6a11cb;
+  color: #6a11cb;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gradient:hover {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border-color: transparent;
+}
+
+/* Estilos para las tarjetas de características */
+.feature-card {
+    height: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-title {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+
