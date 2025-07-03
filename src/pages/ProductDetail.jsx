@@ -2,6 +2,8 @@ import React from "react";
 import useProductDetail from "../hoocks/useProductDetail";
 import { useParams, useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button, Badge, Spinner } from "react-bootstrap";
+import ProductRating from "../components/ProductRating";
+import ProductImage from "../components/ProductImage";
 import "./ProductDetail.css";
 
 function ProductDetail() {
@@ -25,7 +27,7 @@ function ProductDetail() {
                 <div className="alert alert-danger">
                     Error al cargar el producto. Por favor, intente nuevamente.
                 </div>
-                <Button variant="primary" onClick={() => window.location.reload()} className="mt-3">
+                <Button variant="primary" onClick={() => navigate(0)} className="mt-3">
                     Reintentar
                 </Button>
             </Container>
@@ -54,15 +56,13 @@ function ProductDetail() {
                     ← Volver a productos
                 </Button>
 
-                <Row className="g-4">
-                    <Col lg={6}>
-                        <div className="product-image-container">
-                            <img
-                                src={product.image}
-                                alt={product.title}
-                                className="product-image"
-                            />
-                        </div>
+                <Row className="g-4 align-items-stretch">
+                    <Col lg={6} className="d-flex">
+                        <ProductImage
+                            src={product.image}
+                            alt={product.title}
+                            className="h-100"
+                        />
                     </Col>
                     <Col lg={6}>
                         <div className="product-info">
@@ -71,22 +71,13 @@ function ProductDetail() {
                             </Badge>
                             <h1 className="product-title">{product.title}</h1>
 
-                            <div className="rating">
-                                {[...Array(5)].map((_, index) => (
-                                    <span
-                                        key={index}
-                                        className={index < Math.round(product.rating?.rate || 0) ? 'text-warning' : 'text-muted'}
-                                    >
-                                        ★
-                                    </span>
-                                ))}
-                                <span className="text-muted ms-2">
-                                    ({product.rating?.count || 0} reseñas)
-                                </span>
-                            </div>
+                            <ProductRating
+                                rating={product.rating}
+                                className="mb-3"
+                            />
 
                             <div className="price">
-                                ${product.price.toFixed(2)}
+                                ${product.price?.toFixed(2) || 0}
                                 {product.price > 50 && (
                                     <Badge bg="success" className="ms-2">
                                         Envío Gratis

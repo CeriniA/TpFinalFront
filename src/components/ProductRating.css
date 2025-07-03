@@ -1,0 +1,22 @@
+.product-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.rating-star {
+    color: #e4e5e9;
+    font-size: 1.25rem;
+    margin-right: 0.2rem;
+    line-height: 1;
+}
+
+.rating-star.active {
+    color: #ffc107;
+}
+
+.rating-count {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+}
