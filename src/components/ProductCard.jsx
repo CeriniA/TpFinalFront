@@ -12,12 +12,15 @@ function ProductCard({ product }) {
     return (
         <Card className="product-card h-100">
             <Card.Body className="card-body">
-            <ProductImage 
-                src={image} 
-                alt={title}
-                showRating={!!rating?.rate}
-                rating={rating}
-            />
+                <div className="product-image-container">
+
+                    <ProductImage
+                        src={image}
+                        alt={title}
+                        showRating={!!rating?.rate}
+                        rating={rating}
+                    />
+                </div>
                 <div className="mb-2">
                     <span className="badge category-badge">{category}</span>
                 </div>
@@ -31,7 +34,7 @@ function ProductCard({ product }) {
                     <h5 className="product-price mb-0">
                         ${price?.toFixed(2)}
                     </h5>
-                    <Link 
+                    <Link
                         to={`/products/${id}`}
                         className="detail-button"
                     >
